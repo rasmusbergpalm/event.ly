@@ -12,11 +12,13 @@
         echo $this->Html->css('base');
         echo $this->Html->css('media.queries');
         echo $this->Html->css('tipsy');
+        echo $this->Html->css('ui-lightness/jquery-ui-1.8.20.custom');
         echo $this->Html->css('http://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Quicksand:400,700,300');
         
 
         //JS
-        echo $this->Html->script('jquery-1.7.1.min');
+        echo $this->Html->script('jquery-1.7.2.min');
+        echo $this->Html->script('jquery-ui-1.8.20.custom.min');
         echo $this->Html->script('html5shiv');
         echo $this->Html->script('jquery.tipsy');
         echo $this->Html->script('jquery.touchSwipe');
@@ -47,21 +49,19 @@
                     <!-- Start Social Icons -->
                     <aside>
                         <ul class="social">
-                            <li class="facebook"><a href="">Facebook</a></li>
-                            <li class="twitter"><a href="http://twitter.com/two2twelve">Twitter</a></li>
-                            <li class="email"><a href="" title="info@two2twelve.com">Email</a></li>
-                            <li class="rss"><a href="" title="App Updates">RSS</a></li>
+                            <li class="twitter"><a target="_blank" href="http://twitter.com/rasmusbergpalm">Twitter</a></li>
                             <!-- More Social Icons:
-					<li class="dribbble"><a href="">Dribbble</a></li>
-					<li class="google"><a href="">Google</a></li>
-					<li class="flickr"><a href="">Flickr</a></li>
-					-->
+                            <li class="dribbble"><a href="">Dribbble</a></li>
+                            <li class="google"><a href="">Google</a></li>
+                            <li class="flickr"><a href="">Flickr</a></li>
+                            -->
                         </ul>
                     </aside>
                     <!-- End Social Icons -->
 
                     <!-- Start Navigation -->
-                    <nav>
+                    
+                    <!--nav>
                         <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#team">Team</a></li>
@@ -73,7 +73,7 @@
                             <li><a href="#styles">Styles</a></li>
                         </ul>
                         <span class="arrow"></span>
-                    </nav>
+                    </nav-->
                     <!-- End Navigation -->
                 </div>
             </header>
@@ -81,7 +81,7 @@
 
             <section class="container">
 
-                <?php echo $this->Session->flash(); ?>
+                <?php //echo $this->Session->flash(); ?>
                 <?php echo $this->fetch('content'); ?>
 
                 <div class="clear"></div>

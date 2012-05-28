@@ -11,6 +11,14 @@ class Event extends AppModel {
  * @var string
  */
 	public $displayField = 'title';
+        
+        public function beforeSave(){
+            $this->data['Event']['from'] = date('Y-m-d H:i:s', strtotime($this->data['Event']['from'].' '.$this->data['Event']['fromTime']));
+            if(!empty($this->data['Event']['to'])){
+                $this->data['Event']['to'] = date('Y-m-d H:i:s', strtotime($this->data['Event']['to'].' '.$this->data['Event']['toTime']));
+            }
+            return true;
+        }
 /**
  * Validation rules
  *
