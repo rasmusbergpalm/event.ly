@@ -15,11 +15,12 @@ class EventsController extends AppController {
      *
      * @return void
      */
+    /*
     public function index() {
         $this->Event->recursive = 0;
         $this->set('events', $this->paginate());
     }
-
+*/
     /**
      * view method
      *
@@ -68,6 +69,7 @@ class EventsController extends AppController {
      * @param string $id
      * @return void
      */
+    /*
     public function edit($id = null) {
         $this->Event->id = $id;
         if (!$this->Event->exists()) {
@@ -84,13 +86,14 @@ class EventsController extends AppController {
             $this->request->data = $this->Event->read(null, $id);
         }
     }
-
+*/
     /**
      * delete method
      *
      * @param string $id
      * @return void
      */
+    /*
     public function delete($id = null) {
         if (!$this->request->is('post')) {
             throw new MethodNotAllowedException();
@@ -106,5 +109,7 @@ class EventsController extends AppController {
         $this->Session->setFlash(__('Event was not deleted'));
         $this->redirect(array('action' => 'index'));
     }
+     
+     */
 
 }
