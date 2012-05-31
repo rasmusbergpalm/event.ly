@@ -35,14 +35,14 @@ body {
     background: #fff;
 }
 .container {
-    width: 1000px;
+    width: 960px;
     margin: 0 auto;
 }
 section #pages {
-    float: right;
-    width: 525px;
+    float: left;
+    width: 480px;
     background: transparent url('../img/light-page_shadow.png') repeat-y top left;
-    padding: 0px 0px 0px 50px;
+    padding: 40px 0px 0px 50px;
     position: relative;
 }
 section #pages .top_shadow,
@@ -62,9 +62,6 @@ section #pages .bottom_shadow {
 }
 section #pages div.page { 
     display: none; 
-    position: absolute;
-    top: 0px;
-    padding-top: 40px;
 }
 section #pages .content_box {
     padding-top: 15px;
