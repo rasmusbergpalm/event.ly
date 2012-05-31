@@ -88,7 +88,8 @@
             </section>
 
             <!-- Start Footer -->
-            <footer class="container">
+            <br class="clear" />
+            <footer>
                 <p>event.ly &copy; 2012. All Rights Reserved.</p>
             </footer>
             <!-- End Footer -->

@@ -531,7 +531,7 @@ div.press_mentions ul li address a:hover { color: #333;	}
 ---------------------------------------------*/
 footer {
     clear: both;
-    padding-top: 40px;
+    margin-top: 40px;
     text-align: center;
     cursor: default;
     padding-bottom: 30px;
