@@ -53,7 +53,7 @@ class EventsController extends AppController {
             $event = $this->Event->save($this->request->data);
             if ($event) {
                 $this->Session->setFlash(__('The event has been saved'));
-                $this->redirect(array('action' => 'view', $event['Event']['view_id']));
+                $this->redirect('/'.$event['Event']['view_id']);
             } else {
                 $this->Session->setFlash(__('The event could not be saved. Please, try again.'));
             }
