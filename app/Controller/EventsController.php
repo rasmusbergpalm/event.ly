@@ -11,28 +11,26 @@ class EventsController extends AppController {
     public $components = array('Upload');
 
     /**
-     * index method
-     *
-     * @return void
-     */
-    /*
-    public function index() {
-        $this->Event->recursive = 0;
-        $this->set('events', $this->paginate());
-    }
-*/
-    /**
      * view method
      *
      * @param string $id
      * @return void
      */
-    public function view($id = null) {
-        $this->Event->id = $id;
-        if (!$this->Event->exists()) {
+    public function view($view_id = null) {
+        $event = $this->Event->find('first',array(
+            'conditions' => array(
+                'view_id' => $view_id
+            ),
+            'contain' => array(
+                'Guest' => array(
+                    'order' => 'id DESC'
+                )
+            )
+        ));
+        if (empty($event)) {
             throw new NotFoundException(__('Invalid event'));
         }
-        $this->set('event', $this->Event->read(null, $id));
+        $this->set(compact('event'));
     }
 
     /**
@@ -42,7 +40,6 @@ class EventsController extends AppController {
      */
     public function add() {
         if ($this->request->is('post')) {
-            
             if(!empty($this->data['Event']['image']['name'])){
                 $file = $this->data['Event']['image'];
                 $file['name'] = String::uuid();
@@ -53,10 +50,10 @@ class EventsController extends AppController {
             }
             
             $this->Event->create();
-            
-            if ($this->Event->save($this->request->data)) {
+            $event = $this->Event->save($this->request->data);
+            if ($event) {
                 $this->Session->setFlash(__('The event has been saved'));
-                $this->redirect(array('action' => 'view', $this->Event->getLastInsertID()));
+                $this->redirect(array('action' => 'view', $event['Event']['view_id']));
             } else {
                 $this->Session->setFlash(__('The event could not be saved. Please, try again.'));
             }

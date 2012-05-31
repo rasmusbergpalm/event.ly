@@ -1,8 +1,10 @@
 <div id="app_info">
-    <h1>The simplest way to create an event.</h1>
-    <span class="tagline">Fill out the details</span>
-    <span class="tagline">Get a unique url to your event</span>
-    <span class="tagline">Invite your guests</span>
+    <div style="text-align: right">
+        <h1>The simplest way to create an event.</h1>
+        <span class="tagline">Fill out the details</span>
+        <span class="tagline">Get a unique url to your event</span>
+        <span class="tagline">Invite your guests</span>
+    </div>
 </div>
 <div id="pages">
     <div class="top_shadow"></div>

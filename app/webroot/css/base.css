@@ -63,7 +63,6 @@ section #pages .bottom_shadow {
 section #pages div.page { 
     display: none; 
     position: absolute;
-    width: 100%;
     top: 0px;
     padding-top: 40px;
 }
@@ -152,8 +151,7 @@ section { }
 section #app_info {
     float: left;
     width: 375px;
-    margin-top: 50px;
-    text-align: right;
+    padding-top: 40px;
     padding-right: 50px;
 }
 section #app_info .logo {
@@ -995,10 +993,12 @@ div#contact_form textarea {
     clear: both;
     height: 150px;
 }
-div#contact_form input[type="submit"] {
+input[type="submit"] {
     float: right;
+    width: auto;
     margin-top: 15px;
-    width: inherit;
+    margin-left: 15px;
+
 }
 
 div#contact_form .error {
@@ -1057,6 +1057,31 @@ img { border: none; }
 
 
 /* OWN CRAP */
-.by{
-/*    font-size: 12px;*/
+ul.guests{
+    list-style: none;
+    font-size: 14px;
+}
+ul.guests li{
+    line-height: 32px;
+}
+ul.guests li span{
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px;
+    margin-right: 12px;
+}
+ul.guests span.attending {
+    background-color: #cae285;
+    color: #5d7731
+}
+
+ul.guests span.declined {
+    background-color: #f78297;
+    color: #913944;
+}
+
+p.comment {
+    margin-top: -4px;
+    margin-left: 100px;  
 }
